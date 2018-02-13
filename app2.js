@@ -6,7 +6,7 @@ $(document).ready(function(){
 	{
 		try
 		{
-			navigator.serviceWorker.register('./sw.js');
+			navigator.serviceWorker.register('sw.js');
 			console.log("registered");
 		}
 		catch(error)
