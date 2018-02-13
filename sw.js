@@ -2,7 +2,8 @@
 const staticAssets=[
 "./",
 "./btb.css",
-"./app2.js"
+"./app2.js",
+"./images"
 ];
 
 self.addEventListener('install', async function()
