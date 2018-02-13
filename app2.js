@@ -1,4 +1,24 @@
 $(document).ready(function(){
+	
+	window.addEventListener('load',function()
+{
+	if('serviceWorker' in navigator)
+	{
+		try
+		{
+			navigator.serviceWorker.register('sw.js');
+			console.log("registered");
+		}
+		catch(error)
+		{
+			console.log(error);
+
+		}
+
+	}
+
+});
+
 
 if(window.innerHeight > window.innerWidth){
     alert("Please use Landscape mode for best experience!");
