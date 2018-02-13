@@ -33,7 +33,7 @@ var scissorSign=document.getElementById("scissor");
 var game=document.getElementById("gamebt");
 var player=document.getElementById("player_name");
 var restartbt=document.getElementById("restart");
-
+var choiceClass=document.getElementsByClassName("choicelist");
 
 var interval;
 
@@ -201,7 +201,7 @@ startplay.addEventListener('click',function(){
 	
 		},100);
 		startplay.disabled=true;
-		
+		choiceClass.disabled=false;
 	});
 
 
@@ -210,7 +210,7 @@ rockSign.addEventListener('click',function(){
 	clearInterval(interval);
 	setPlayerSign(signs[2],);
 	getResult("rock");
-	
+	choiceClass.disabled=true;
 
 });
 paperSign.addEventListener('click',function(){
@@ -218,14 +218,14 @@ paperSign.addEventListener('click',function(){
 	clearInterval(interval);
 	setPlayerSign(signs[0]);
 	getResult("paper");
-
+	choiceClass.disabled=true;
 });
 scissorSign.addEventListener('click',function(){
 	clicked=true;
 	clearInterval(interval);
 	setPlayerSign(signs[1]);
 	getResult("scissor");
-
+	choiceClass.disabled=true;
 });
 
 function setPlayerSign(playersign)
