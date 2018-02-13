@@ -2,8 +2,7 @@
 const staticAssets=[
 "./",
 "./btb.css",
-"./app2.js",
-"https://github.com/aayush2096/BeatTheBot/tree/master/images"
+"./app2.js"
 ];
 
 self.addEventListener('install', async function()
