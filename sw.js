@@ -4,7 +4,7 @@ const staticAssests=[
 './app2.js'
 ];
 
-self.addEventListener('install', evvent =>{
+self.addEventListener('install', async event =>{
 
 const cache= await caches.open('game-cache');
 cache.addAll(staticAssests);
