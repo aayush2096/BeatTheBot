@@ -33,10 +33,10 @@ var scissorSign=document.getElementById("scissor");
 var game=document.getElementById("gamebt");
 var player=document.getElementById("player_name");
 var restartbt=document.getElementById("restart");
+var choicelist=document.getElementById("choice");
 
-
+choicelist.disabled=true;
 var interval;
-
 var signs=["./images/paper.png","./images/scissor.png","./images/rock.png"];
 var random;
 var init=$("#initial");
@@ -201,31 +201,38 @@ startplay.addEventListener('click',function(){
 	
 		},100);
 		startplay.disabled=true;
-		ChoiceClass(false);
+		choicelist.disabled=false;
 	});
 
 
 rockSign.addEventListener('click',function(){
+
+	if(!choicelist.disabled){	
 	clicked=true;
 	clearInterval(interval);
 	setPlayerSign(signs[2],);
 	getResult("rock");
-	ChoiceClass(true);
+	choicelist.disabled=true;
+	}
 
 });
 paperSign.addEventListener('click',function(){
+	if(!choicelist.disabled){
 	clicked=true;
 	clearInterval(interval);
 	setPlayerSign(signs[0]);
 	getResult("paper");
-	ChoiceClass(true);
+	choicelist.disabled=true;
+}
 });
 scissorSign.addEventListener('click',function(){
+if(!choicelist.disabled){
 	clicked=true;
 	clearInterval(interval);
 	setPlayerSign(signs[1]);
 	getResult("scissor");
-	ChoiceClass(true);
+	choicelist.disabled=true;
+}
 });
 
 function setPlayerSign(playersign)
@@ -233,12 +240,7 @@ function setPlayerSign(playersign)
 	uHand.src=playersign;
 }
 
-function ChoiceClass(val)
-	{
-		rockSign.disabled=val;
-		paperSign.disabled=val;
-		scissorSign.disabled=val;
-	}
+
 
 function getResult(usersign)
 {
