@@ -2,7 +2,10 @@ const staticAssests=[
 './',
 './btb.css',
 './app2.js',
-'./images/star.png'
+'./images/star.png',
+'./images/win.png',
+'./images/girl.png',
+'./images/lost.png'
 ];
 
 self.addEventListener('install', async event =>{
