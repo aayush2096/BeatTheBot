@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-
+if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape mode for best experience!");
+}
 
 var startplay=document.getElementById("startbt");
 var uHand=document.getElementById("user_choice");
