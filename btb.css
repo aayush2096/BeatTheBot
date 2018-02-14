@@ -3,6 +3,7 @@ body
 	padding:0;
 	margin:0;
 	background-color: black;
+	
 }
 
 #win-lost
@@ -250,7 +251,7 @@ body
 {
 	position:absolute;
 	left:50%;
-	top:60%;
+	top:250px;
 	z-index:1;
 
 	width:200px;
@@ -283,7 +284,7 @@ body
 	
 	#credits
 {
-	left:40%;
+	left:42%;
 }
 
 	#main
