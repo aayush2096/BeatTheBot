@@ -248,7 +248,7 @@ body
 }
 #credits
 {
-	position:fixed;
+	position:absolute;
 	left:50%;
 	top:60%;
 	z-index:1;
