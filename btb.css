@@ -246,12 +246,45 @@ body
 	left:175px;
 	bottom:23px;
 }
+#credits
+{
+	position:fixed;
+	left:50%;
+	top:60%;
+	z-index:1;
+
+	width:200px;
+	height:200px;
+
+
+	 
+	
+}
+#credits h3
+{
+	color: white;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#credits img
+{
+	position: absolute;
+	width:100px;
+	height:auto;
+	top:50px;
+	left:0px;
+	border-radius:10px;
+}
 
 
 @media only screen and (max-width:750px)
 {
 	
-	
+	#credits
+{
+	left:40%;
+}
 
 	#main
 	{
