@@ -5,7 +5,8 @@ const staticAssests=[
 './images/star.png',
 './images/win.png',
 './images/girl.png',
-'./images/lost.png'
+'./images/lost.png',
+'./images/me.jpg'
 ];
 
 self.addEventListener('install', async event =>{
