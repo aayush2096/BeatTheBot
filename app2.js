@@ -2,6 +2,37 @@ $(document).ready(function(){
 	
 	window.addEventListener('load',function()
 {
+		
+//////////////////////////////////////////////////////////		
+		
+		if('serviceWorker' in navigator)
+	{
+		try{
+		
+			navigator.serviceWorker.register('sw.js')
+			console.log("swregistered");
+
+ 			 if (Notification.permission == 'granted') {
+    			navigator.serviceWorker.getRegistration().then(function(reg) {
+      			reg.showNotification('Hello world!');
+    		});
+  		}
+
+		}	
+		catch(error)
+		{
+			console.log(error);
+		}
+	}
+		
+		
+		
+		
+		
+		
+		
+///////////////////////////////////////////////////////////////		
+		
 	if('serviceWorker' in navigator)
 	{
 		try
