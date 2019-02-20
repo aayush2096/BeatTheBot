@@ -18,7 +18,7 @@ $(document).ready(function(){
 
  			 if (Notification.permission == 'granted') {
     			navigator.serviceWorker.getRegistration().then(function(reg) {
-      			reg.showNotification('Hello world!');
+      			reg.showNotification('Hey there! a notification for you!');
     		});
   		}
 
