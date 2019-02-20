@@ -29,3 +29,10 @@ async function cachefirst(req)
 	const cacheRes = await caches.match(req);
 	return cacheRes || fetch(req);
 }
+
+self.addEventListener('notificationclick',function(){
+
+ clients.openWindow('https://github.com/aayush2096');
+
+
+});
