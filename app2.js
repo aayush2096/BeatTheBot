@@ -19,7 +19,7 @@ $(document).ready(function(){
  			 if (Notification.permission == 'granted') {
     			navigator.serviceWorker.getRegistration().then(function(reg) {
       			reg.showNotification('Welcome to Beat the bot game',{
-   	 			body: "Click on this notifcation to view my profile");
+   	 			body: "Click on this notifcation to view my profile"
     			}
 			);
   		}
