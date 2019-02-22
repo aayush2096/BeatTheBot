@@ -24,12 +24,12 @@ $(document).ready(function(){
        				 console.log('Not subscribed to push service!');
      				 } else {
        				 // We have a subscription, update the database
-       				 console.log('Subscription object: ', sub);
+				 console.log('Subscription object: ', sub);
      				 }
 				
 			});
 				
-				
+			/*	
 			if (Notification.permission == 'granted')
 			{
 				navigator.serviceWorker.ready.then(function(){
@@ -42,7 +42,7 @@ $(document).ready(function(){
     				
 				
 			}
-			
+			*/
 			
 			});
 			
