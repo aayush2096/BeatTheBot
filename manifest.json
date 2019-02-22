@@ -1,10 +1,3 @@
 {
-  "name": "Beat The Bot",
-  "short_name": "rps",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
-  "display": "standalone",
-  "start_url": ".",
-  "icons":[{"src":"./images/icon.png"}],
-  "splash_pages": null
+  "gcm_sender_id": "733605467834"
 }
