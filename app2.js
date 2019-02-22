@@ -9,25 +9,46 @@ $(document).ready(function(){
     console.log('Notification permission status:', status);
 });
 		
-		if('serviceWorker' in navigator)
+	if('serviceWorker' in navigator)
 	{
 		try{
 		
-			navigator.serviceWorker.register('sw.js')
-			console.log("swregistered");
-
- 			 if (Notification.permission == 'granted')
-			 {
-				 navigator.serviceWorker.ready.then(function(){
+			navigator.serviceWorker.register('sw.js').then(function(reg){
+			
+				console.log("swregistered",reg);
+			
+				reg.pushManager.getSubscription().then(function(sub){
+				
+				 if (sub === null) {
+        			// Update UI to ask user to register for Push
+       				 console.log('Not subscribed to push service!');
+     				 } else {
+       				 // We have a subscription, update the database
+       				 console.log('Subscription object: ', sub);
+     				 }
+				
+			});
+				
+				
+			if (Notification.permission == 'granted')
+			{
+				navigator.serviceWorker.ready.then(function(){
 				 
 				navigator.serviceWorker.getRegistration().then(function(reg) {
       				reg.showNotification('Welcome to Beat the bot game',{body: "Click on this notifcation to view my profile"});
   				}); 
 				 
-				 });
+				});
     				
+				
 			}
+			
+			
+			});
+			
 
+ 			 
+			 
 		}	
 		catch(error)
 		{
@@ -36,6 +57,9 @@ $(document).ready(function(){
 	}
 		
 		
+		
+		
+	
 		
 		
 		
