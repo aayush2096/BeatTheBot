@@ -36,3 +36,25 @@ self.addEventListener('notificationclick',function(){
 
 
 });
+
+self.addEventListener('push',function(message){
+	
+	
+	
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
