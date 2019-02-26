@@ -3,7 +3,7 @@ $(document).ready(function(){
 	window.addEventListener('load',function()
 {
 		
-//////////////////////////////////////////////////////////		
+///////////////////////this part is to test push notification//////////////////////////////////////////////////////////		
 		
 		Notification.requestPermission(function(status) {
     console.log('Notification permission status:', status);
@@ -13,25 +13,15 @@ $(document).ready(function(){
 	{
 		try{
 		
-			navigator.serviceWorker.register('sw.js').then(function(reg){
-			
-				console.log("swregistered",reg);
-			
-				reg.pushManager.getSubscription().then(function(sub){
-				
-				 if (sub === null) {
-        			// Update UI to ask user to register for Push
-       				 console.log('Not subscribed to push service!');
-     				 } else {
-       				 // We have a subscription, update the database
-				 console.log('Subscription object: ', sub);
-     				 }
-				
-			});
-				
 				
 			if (Notification.permission == 'granted')
 			{
+				navigator.serviceWorker.register('sw.js').then(function(reg){
+			
+				console.log("swregistered",reg);
+			
+				});
+			
 				navigator.serviceWorker.ready.then(function(){
 				 
 				navigator.serviceWorker.getRegistration().then(function(reg) {
@@ -42,12 +32,7 @@ $(document).ready(function(){
     				
 				
 			}
-			
-			
-			});
-			
-
- 			 
+				 
 			 
 		}	
 		catch(error)
@@ -65,7 +50,7 @@ $(document).ready(function(){
 		
 		
 		
-///////////////////////////////////////////////////////////////		
+/////actual code begins//////////////////////////////////////////////////////////		
 		
 	if('serviceWorker' in navigator)
 	{
