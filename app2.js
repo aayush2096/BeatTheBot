@@ -29,7 +29,7 @@ $(document).ready(function(){
 				
 			});
 				
-			/*	
+				
 			if (Notification.permission == 'granted')
 			{
 				navigator.serviceWorker.ready.then(function(){
@@ -42,7 +42,7 @@ $(document).ready(function(){
     				
 				
 			}
-			*/
+			
 			
 			});
 			
